@@ -50,6 +50,7 @@ public class ThrowDetector : MonoBehaviour
         isMouseDown = false;
         mouseSpeed = (oldMousePos - Input.mousePosition);
         prefabRef.GetComponent<Rigidbody2D>().AddForce(mouseSpeed * 0.08f * -1, ForceMode2D.Impulse);
-        prefabRef.GetComponentInChildren<Bounce>().enabled = true;
+
+        prefabRef.GetComponentInChildren<Dice>().enabled = true;
     }
 }

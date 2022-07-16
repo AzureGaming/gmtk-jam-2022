@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Explode : MonoBehaviour
 {
+    float radiusValue;
+    float radius;
+
     [SerializeField] GameObject debugPrefab;
     Rigidbody2D rb2d;
 
@@ -14,14 +17,34 @@ public class Explode : MonoBehaviour
 
     void Update()
     {
-        if (rb2d.velocity.x < 0.1f)
+        if (rb2d.velocity.magnitude < 0.1f)
         {
-            Debug();
+            radius = radiusValue * 0.1f;
+            CheckCollisions(radius);
+            Debug2();
+            Destroy(gameObject);
         }
     }
 
-    void Debug()
+    public void SetRadius(float val)
     {
-        Instantiate(debugPrefab);
+        radiusValue = val;
+    }
+
+    void CheckCollisions(float radius)
+    {
+        Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position, radius);
+        foreach (Collider2D collision in collisions)
+        {
+            if (collision.GetComponent<Damageable>())
+            {
+                collision.GetComponent<Damageable>().HandleCollision();
+            }
+        }
+    }
+
+    void Debug2()
+    {
+        Instantiate(debugPrefab, transform.position, Quaternion.identity).GetComponent<ExplosionRadiusDebug>().SetRadius(radius);
     }
 }

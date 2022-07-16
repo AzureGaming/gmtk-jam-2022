@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] GameObject enemyPrefab;
+    [SerializeField] GameObject[] enemyPrefabs;
     float minBoundX;
     float maxBoundX;
     float yTarget;
@@ -31,8 +31,13 @@ public class EnemySpawner : MonoBehaviour
         if (timer == 0)
         {
             Vector2 enemyPos = new Vector2(Random.Range(minBoundX, maxBoundX), yTarget);
-            Instantiate(enemyPrefab, enemyPos, Quaternion.identity);
+            Instantiate(GetRandomPrefab(), enemyPos, Quaternion.identity);
             timer = Random.Range(0f, 1f);
         }
+    }
+
+    GameObject GetRandomPrefab()
+    {
+        return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
     }
 }

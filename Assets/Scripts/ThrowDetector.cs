@@ -10,7 +10,6 @@ public class ThrowDetector : MonoBehaviour
     Vector3 mouseSpeed;
     bool isMouseDown = false;
 
-    [SerializeField] GameObject prefab;
     GameObject prefabRef;
 
     private void Update()
@@ -35,7 +34,7 @@ public class ThrowDetector : MonoBehaviour
         oldMousePos = Input.mousePosition;
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-        prefabRef = Instantiate(prefab, screenPoint, Quaternion.identity);
+        prefabRef = Instantiate(FindObjectOfType<DiceManager>().GetRandomDiePrefab(), screenPoint, Quaternion.identity);
     }
 
     private void OnMouseDrag()

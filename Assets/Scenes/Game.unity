@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1149,6 +1149,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 4788703268095644268, guid: c565d0f1a51cc3348859073561241aba, type: 3}
   - {fileID: 8590369136713924579, guid: a247e3e62c330814cb508285a960e27b, type: 3}
+  - {fileID: 4788703268095644268, guid: 8dbe1095a084ac14eb7460ee03150131, type: 3}
 --- !u!1 &1790096388
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explode : MonoBehaviour
+public class Explode : DiceTrigger
 {
     float radiusValue;
     float radius;
@@ -21,6 +21,7 @@ public class Explode : MonoBehaviour
         {
             radius = radiusValue * 0.1f;
             CheckCollisions(radius);
+            OnResolve?.Invoke();
             Debug2();
             Destroy(gameObject);
         }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiceTriggerAcid : MonoBehaviour
+public class DiceTriggerAcid : DiceTrigger
 {
     float radiusValue;
     float radius;
@@ -22,6 +22,7 @@ public class DiceTriggerAcid : MonoBehaviour
         {
             radius = radiusValue * 0.1f;
             SpawnAcid(radius);
+            OnResolve?.Invoke();
             Destroy(gameObject);
         }
     }

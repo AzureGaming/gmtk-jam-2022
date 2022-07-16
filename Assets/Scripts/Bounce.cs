@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Bounce : MonoBehaviour
 {
+    BounceAudio audio;
     float speed = 0f;
+
+    private void Awake()
+    {
+        audio = GetComponent<BounceAudio>();
+    }
 
     private void Start()
     {
@@ -25,12 +31,17 @@ public class Bounce : MonoBehaviour
         newPos.y += speed;
         transform.localPosition = newPos;
 
-        if (transform.localPosition.y < 0) // if hit ground
+        if (transform.localPosition.y <= 0) // if hit ground
         {
             // simulate bounce
             Vector3 reversedPos = transform.localPosition;
             reversedPos.y = -reversedPos.y;
             transform.localPosition = reversedPos;
+
+            if (speed < -0.0006f) // stop playing audio when bounce is too small
+            {
+                audio.Play();
+            }
 
             if (speed < 0)
             {

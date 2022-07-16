@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MouseCursor : MonoBehaviour
 {
-    [SerializeField] Sprite[] sprites;
     Animator anim;
+   [SerializeField] DieShakeAudio audio;
 
     private void Awake()
     {
@@ -37,6 +37,13 @@ public class MouseCursor : MonoBehaviour
 
     void SetMouseDown(bool val)
     {
+        if (val)
+        {
+            audio.PlayShake();
+        } else
+        {
+            audio.StopPlayingShake();
+        }
         anim.SetBool("IsMouseDown", val);
     }
 

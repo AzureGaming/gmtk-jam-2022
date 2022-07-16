@@ -22,7 +22,7 @@ public class DiceTriggerAcid : DiceTrigger
         {
             radius = radiusValue * 0.1f;
             SpawnAcid(radius);
-            OnResolve?.Invoke();
+            Complete();
             Destroy(gameObject);
         }
     }

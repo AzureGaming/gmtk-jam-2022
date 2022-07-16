@@ -21,7 +21,7 @@ public class Explode : DiceTrigger
         {
             radius = radiusValue * 0.1f;
             CheckCollisions(radius);
-            OnResolve?.Invoke();
+            Complete();
             Debug2();
             Destroy(gameObject);
         }

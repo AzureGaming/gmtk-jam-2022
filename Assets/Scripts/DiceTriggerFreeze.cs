@@ -22,7 +22,7 @@ public class DiceTriggerFreeze : DiceTrigger
             radius = radiusValue * 0.1f;
             Freeze(radius);
             OnResolve?.Invoke();
-            Debug2();
+            Complete();
             Destroy(gameObject);
         }
     }

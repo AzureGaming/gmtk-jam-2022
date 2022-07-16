@@ -31,6 +31,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d348f35fccfa30849837c284c8cd8caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolveSound: {fileID: 1157048254772989704}
   acidPrefab: {fileID: 90343527325172131, guid: af78f94a3ac5e3648a7e9292c2968740, type: 3}
   debugPrefab: {fileID: 8357133860421482385, guid: ae04b88065f83084989351c030b976a6, type: 3}
 --- !u!1001 &8735679335180248614
@@ -100,11 +101,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7581237486699505966, guid: 2ec87653ff9d5b34494530017b45a7f7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0276bfb6fd012d34c8390e69acc8e725, type: 3}
     m_RemovedComponents:
     - {fileID: 8979066138815335639, guid: 2ec87653ff9d5b34494530017b45a7f7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2ec87653ff9d5b34494530017b45a7f7, type: 3}
 --- !u!1 &1787488611058532364 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7058602389067064874, guid: 2ec87653ff9d5b34494530017b45a7f7, type: 3}
+  m_PrefabInstance: {fileID: 8735679335180248614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1157048254772989704 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7581237486699505966, guid: 2ec87653ff9d5b34494530017b45a7f7, type: 3}
   m_PrefabInstance: {fileID: 8735679335180248614}
   m_PrefabAsset: {fileID: 0}

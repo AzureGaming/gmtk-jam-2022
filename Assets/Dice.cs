@@ -27,6 +27,11 @@ public class Dice : MonoBehaviour
         {
             GetComponent<DiceTriggerAcid>().enabled = true;
         }
+
+        if (GetComponent<DiceTriggerFreeze>())
+        {
+            GetComponent<DiceTriggerFreeze>().enabled = true;
+        }
     }
 
     IEnumerator RollValue()
@@ -45,6 +50,10 @@ public class Dice : MonoBehaviour
             if (GetComponent<DiceTriggerAcid>())
             {
                 GetComponent<DiceTriggerAcid>().SetRadius(diceValue);
+            }
+            if (GetComponent<DiceTriggerFreeze>())
+            {
+                GetComponent<DiceTriggerFreeze>().SetRadius(diceValue);
             }
         }
     }

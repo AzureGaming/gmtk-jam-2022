@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] ScreenManager screenManager;
     [SerializeField] Health health;
 
     private void OnEnable()
@@ -27,6 +28,6 @@ public class GameManager : MonoBehaviour
 
     void LoseGame()
     {
-
+        screenManager.GameOver();
     }
 }

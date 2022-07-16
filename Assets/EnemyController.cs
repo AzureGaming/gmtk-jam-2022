@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
+    [SerializeField] Moveable moveable;
     Rigidbody2D rb2d;
 
     private void Awake()
@@ -13,9 +14,6 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        Vector3 newPos = transform.position;
-        newPos.y -= 0.001f;
-
-        rb2d.MovePosition(newPos);
+        rb2d.velocity = -Vector2.up * moveable.speed;
     }
 }

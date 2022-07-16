@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class DiceManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] dicePrefabs;
-
-    public GameObject GetRandomDiePrefab()
+    public enum DiceType
     {
-        int randomIdx = Random.Range(0, dicePrefabs.Length);
-        return dicePrefabs[randomIdx];
+        Explosive,
+        Acid,
+        Freezing
+    }
+    public static DiceType type;
+
+    private void Start()
+    {
+        SelectDiceType();
+    }
+
+    public void SelectDiceType()
+    {
+        //type = (DiceType)Random.Range(0, 2);
+        type = DiceType.Explosive;
     }
 }

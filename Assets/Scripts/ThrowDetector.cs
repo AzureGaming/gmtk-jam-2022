@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ThrowDetector : MonoBehaviour
 {
+    public delegate void MouseDown();
+    public static MouseDown OnMouseDown;
+    public delegate void MouseUp();
+    public static MouseUp OnMouseUp;
+
     Vector3 oldMousePos;
     Vector3 screenPoint;
     Vector3 offset;
@@ -16,40 +21,49 @@ public class ThrowDetector : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !isMouseDown)
         {
-            OnMouseDown();
+            StartThrow();
         }
         else if (Input.GetMouseButtonUp(0) && isMouseDown)
         {
-            OnMouseUp();
+                Release();
         }
         else if (isMouseDown)
         {
-            OnMouseDrag();
+            //MoveDiePrefab();
         }
     }
 
-    private void OnMouseDown()
+    private void StartThrow()
     {
         isMouseDown = true;
+        OnMouseDown?.Invoke();
+
         oldMousePos = Input.mousePosition;
-        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-        prefabRef = Instantiate(FindObjectOfType<DiceManager>().GetRandomDiePrefab(), screenPoint, Quaternion.identity);
     }
 
-    private void OnMouseDrag()
+    private void MoveDiePrefab()
     {
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) - offset;
         prefabRef.transform.position = Camera.main.ScreenToWorldPoint(curScreenPoint);
     }
 
-    private void OnMouseUp()
+    private void Release()
     {
         isMouseDown = false;
-        mouseSpeed = (oldMousePos - Input.mousePosition);
-        prefabRef.GetComponent<Rigidbody2D>().AddForce(mouseSpeed * 0.08f * -1, ForceMode2D.Impulse);
+        OnMouseUp?.Invoke();
 
-        prefabRef.GetComponentInChildren<Dice>().enabled = true;
+        mouseSpeed = (oldMousePos - Input.mousePosition);
+        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+
+        Vector3 targetPos = Camera.main.ScreenToWorldPoint(curScreenPoint);
+
+        //prefabRef = Instantiate(FindObjectOfType<DiceManager>().GetRandomDiePrefab(), targetPos, Quaternion.identity);
+        //prefabRef.GetComponent<Rigidbody2D>().AddForce(mouseSpeed * 0.08f * -1, ForceMode2D.Impulse);
+
+        //prefabRef.GetComponentInChildren<Dice>().enabled = true;
+        //prefabRef = null;
     }
 }

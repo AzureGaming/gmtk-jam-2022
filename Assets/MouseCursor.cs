@@ -45,10 +45,24 @@ public class MouseCursor : MonoBehaviour
         switch (DiceManager.type)
         {
             case DiceManager.DiceType.Explosive:
-                anim.SetBool("IsExplosive",true);
+                anim.SetBool("IsExplosive", true);
+                anim.SetBool("IsAcid", false);
+                anim.SetBool("IsFreezing", false);
+                break;
+            case DiceManager.DiceType.Acid:
+                anim.SetBool("IsExplosive", false);
+                anim.SetBool("IsAcid", true);
+                anim.SetBool("IsFreezing", false);
+                break;
+            case DiceManager.DiceType.Freezing:
+                anim.SetBool("IsExplosive", false);
+                anim.SetBool("IsAcid", false);
+                anim.SetBool("IsFreezing", true);
                 break;
             default:
                 anim.SetBool("IsExplosive", false);
+                anim.SetBool("IsAcid", false);
+                anim.SetBool("IsFreezing", false);
                 break;
         }
     }

@@ -8,7 +8,8 @@ public class DiceManager : MonoBehaviour
     {
         Explosive,
         Acid,
-        Freezing
+        Freezing,
+        None
     }
     public static DiceType type;
 
@@ -17,9 +18,25 @@ public class DiceManager : MonoBehaviour
         SelectDiceType();
     }
 
+    private void OnEnable()
+    {
+        ThrowDetector.OnMouseUp += ClearDiceType;
+        DiceTrigger.OnResolve += SelectDiceType;
+    }
+
+    private void OnDisable()
+    {
+        ThrowDetector.OnMouseUp -= ClearDiceType;
+        DiceTrigger.OnResolve -= SelectDiceType;
+    }
+
     public void SelectDiceType()
     {
-        //type = (DiceType)Random.Range(0, 2);
-        type = DiceType.Explosive;
+        type = (DiceType)Random.Range(0, 3);
+    }
+
+    public void ClearDiceType()
+    {
+        type = DiceType.None;
     }
 }

@@ -166,10 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8c65d6f58f9fc4b862903344cb3ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dicePrefabs:
-  - {fileID: 7989848560622368630, guid: 8117f7b869e92ba4c97543ee51461443, type: 3}
-  - {fileID: 7058602389067064874, guid: 2ec87653ff9d5b34494530017b45a7f7, type: 3}
-  - {fileID: 1787488611058532364, guid: 23f6736f73009374d8bfbe6be5ff209c, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ee840941cf68f4aa20ab63b7d348f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites: []
 --- !u!212 &1165934149
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -645,6 +642,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24a4f326e24bfe4e8077504b837ef7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dicePrefabs:
+  - {fileID: 7058602389067064874, guid: 2ec87653ff9d5b34494530017b45a7f7, type: 3}
+  - {fileID: 1787488611058532364, guid: 23f6736f73009374d8bfbe6be5ff209c, type: 3}
+  - {fileID: 7989848560622368630, guid: 8117f7b869e92ba4c97543ee51461443, type: 3}
 --- !u!1 &1433451658
 GameObject:
   m_ObjectHideFlags: 0

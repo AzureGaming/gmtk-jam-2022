@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiceTriggerFreeze : MonoBehaviour
+public class DiceTriggerFreeze : DiceTrigger
 {
     float radiusValue;
     float radius;
@@ -21,6 +21,7 @@ public class DiceTriggerFreeze : MonoBehaviour
         {
             radius = radiusValue * 0.1f;
             Freeze(radius);
+            OnResolve?.Invoke();
             Debug2();
             Destroy(gameObject);
         }

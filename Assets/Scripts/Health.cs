@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int health = 20;
+    public int health;
+    public int max;
 }

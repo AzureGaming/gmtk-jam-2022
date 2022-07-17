@@ -32,7 +32,7 @@ public class Explode : DiceTrigger
             {
                 level = 2;
             }
-            Complete(level);
+            Complete(level, radiusValue);
             Destroy(gameObject);
         }
     }

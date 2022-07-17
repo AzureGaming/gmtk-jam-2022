@@ -6,14 +6,17 @@ public class DiceTrigger : MonoBehaviour
 {
     public delegate void Resolve();
     public static Resolve OnResolve;
+    public delegate void ShakeCam(float value);
+    public static ShakeCam OnShakeCam;
     [SerializeField] AudioSource resolveSound;
     [SerializeField] GameObject explosionLevel1Prefab;
     [SerializeField] GameObject explosionLevel2Prefab;
     [SerializeField] GameObject explosionLevel3Prefab;
 
-    protected void Complete(int level)
+    protected void Complete(int level, float dmg)
     {
         OnResolve?.Invoke();
+        OnShakeCam?.Invoke(dmg);
         AudioSource.PlayClipAtPoint(resolveSound.clip, transform.position);
 
         if (level == 1)

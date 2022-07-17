@@ -10,11 +10,20 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         Enemy.OnScore += HandleHit;
+        EnemySpawner.OnDone += CompleteWave;
+        EnemySpawner.OnAllDone += CompleteAllWaves;
     }
 
     private void OnDisable()
     {
         Enemy.OnScore -= HandleHit;
+        EnemySpawner.OnDone -= CompleteWave;
+        EnemySpawner.OnAllDone -= CompleteAllWaves;
+    }
+
+    private void Start()
+    {
+        FindObjectOfType<EnemySpawner>().StartNewWave();
     }
 
     void HandleHit()
@@ -29,5 +38,22 @@ public class GameManager : MonoBehaviour
     void LoseGame()
     {
         screenManager.GameOver();
+    }
+
+    void CompleteWave()
+    {
+        screenManager.ShowWave();
+        StartCoroutine(WaveBreak());
+    }
+
+    void CompleteAllWaves()
+    {
+        screenManager.Victory();
+    }
+
+    IEnumerator WaveBreak()
+    {
+        yield return new WaitForSeconds(1.5f);
+        FindObjectOfType<EnemySpawner>().StartNewWave();
     }
 }

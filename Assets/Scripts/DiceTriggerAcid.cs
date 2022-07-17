@@ -22,7 +22,16 @@ public class DiceTriggerAcid : DiceTrigger
         {
             radius = radiusValue * 0.1f;
             SpawnAcid(radius);
-            Complete();
+            int level = 1;
+            if (radiusValue > 15)
+            {
+                level = 3;
+            }
+            else if (radiusValue > 5 && radiusValue <= 15)
+            {
+                level = 2;
+            }
+            Complete(level);
             Destroy(gameObject);
         }
     }

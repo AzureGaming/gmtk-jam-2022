@@ -32,7 +32,8 @@ public class DiceManager : MonoBehaviour
 
     public void SelectDiceType()
     {
-        type = (DiceType)Random.Range(0, 3);
+        //type = (DiceType)Random.Range(0, 3);
+        type = DiceType.Explosive;
     }
 
     public void ClearDiceType()

@@ -23,7 +23,7 @@ public class Bounce : MonoBehaviour
     {
         if (transform.localPosition.y > 0) // apply gravity if midair
         {
-            speed -= 0.00001f;
+            speed -= 0.001f;
         }
 
         // add speed to altitude

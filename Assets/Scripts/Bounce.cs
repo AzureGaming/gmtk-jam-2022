@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bounce : MonoBehaviour
 {
-    public bool isBuild = false;
+    public bool isBuild = true;
     BounceAudio audio;
     float speed = 0f;
 

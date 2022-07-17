@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] ScreenManager screenManager;
     [SerializeField] Health health;
+    [SerializeField] AudioSource bgm;
 
     private void OnEnable()
     {
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         FindObjectOfType<EnemySpawner>().StartNewWave();
+        bgm.Play();
     }
 
     void HandleHit()

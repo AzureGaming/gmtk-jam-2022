@@ -11,6 +11,7 @@ public class DieShakeAudio : MonoBehaviour
 
     public void PlayShake()
     {
+        Debug.Log(shake3);
         int randomShake = Random.Range(0, 3);
         if (randomShake == 0)
         {
@@ -46,8 +47,6 @@ public class DieShakeAudio : MonoBehaviour
         shake3.loop = true;
         shake3.Play();
     }
-
-
 
     public void StopPlayingShake()
     {

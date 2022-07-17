@@ -1,7 +1,67 @@
 fileFormatVersion: 2
 guid: 7391ade2cd20e264c994647b5095f13d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3689463604094925644
+    second: Numbers-Sheet_945x437_020
+  - first:
+      213: -8766077886672145209
+    second: Numbers-Sheet_945x437_019
+  - first:
+      213: -2883389629610434773
+    second: Numbers-Sheet_945x437_018
+  - first:
+      213: -658959863720593684
+    second: Numbers-Sheet_945x437_017
+  - first:
+      213: 6063944446252276017
+    second: Numbers-Sheet_945x437_016
+  - first:
+      213: 4940278678110236349
+    second: Numbers-Sheet_945x437_015
+  - first:
+      213: -3863046113553880246
+    second: Numbers-Sheet_945x437_014
+  - first:
+      213: 1665098024516064475
+    second: Numbers-Sheet_945x437_013
+  - first:
+      213: 1637288799928607848
+    second: Numbers-Sheet_945x437_012
+  - first:
+      213: 4706178646293421297
+    second: Numbers-Sheet_945x437_011
+  - first:
+      213: -7187626555576637561
+    second: Numbers-Sheet_945x437_010
+  - first:
+      213: 5282305233948584480
+    second: Numbers-Sheet_945x437_09
+  - first:
+      213: 4199877725153648551
+    second: Numbers-Sheet_945x437_08
+  - first:
+      213: -876849770891293489
+    second: Numbers-Sheet_945x437_07
+  - first:
+      213: -5080198567673902504
+    second: Numbers-Sheet_945x437_06
+  - first:
+      213: -7041391460312892538
+    second: Numbers-Sheet_945x437_05
+  - first:
+      213: 6740771785218308613
+    second: Numbers-Sheet_945x437_04
+  - first:
+      213: 426819562168214860
+    second: Numbers-Sheet_945x437_03
+  - first:
+      213: -3647574197665934543
+    second: Numbers-Sheet_945x437_02
+  - first:
+      213: -8884378127348663416
+    second: Numbers-Sheet_945x437_01
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +92,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,7 +101,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -68,7 +128,55 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +185,427 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_020
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1311
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4803256646cccc0800000000000000
+      internalID: -3689463604094925644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_019
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 1311
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4ff735b92a85680800000000000000
+      internalID: -8766077886672145209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_018
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1311
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f5602a8642cf7d0800000000000000
+      internalID: -2883389629610434773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_017
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 1311
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6b1b9ce77ead6f0800000000000000
+      internalID: -658959863720593684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_016
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 1311
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139d1908855772450800000000000000
+      internalID: 6063944446252276017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_015
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 874
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe623478456f8440800000000000000
+      internalID: 4940278678110236349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_014
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 874
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4beaaae604b36ac0800000000000000
+      internalID: -3863046113553880246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_013
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 874
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd41c7bc4dd9b1710800000000000000
+      internalID: 1665098024516064475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_012
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 874
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86468722d71d8b610800000000000000
+      internalID: 1637288799928607848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_011
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 874
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc19dd5b84bf4140800000000000000
+      internalID: 4706178646293421297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_010
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 437
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787a0b8babb604c90800000000000000
+      internalID: -7187626555576637561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_09
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 437
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a21b89f948e4940800000000000000
+      internalID: 5282305233948584480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_08
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 437
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afdbd30a86f84a30800000000000000
+      internalID: 4199877725153648551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_07
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 437
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc44a477cdc4d3f0800000000000000
+      internalID: -876849770891293489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_06
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 437
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a495991528f79b0800000000000000
+      internalID: -5080198567673902504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_05
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68bb49316c3f74e90800000000000000
+      internalID: -7041391460312892538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_04
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ab9e979380c8d50800000000000000
+      internalID: 6740771785218308613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_03
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 0
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c456932612e5ce500800000000000000
+      internalID: 426819562168214860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_02
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 0
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133dd38c796316dc0800000000000000
+      internalID: -3647574197665934543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers-Sheet_945x437_01
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 0
+        width: 945
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88bf1252a2954b480800000000000000
+      internalID: -8884378127348663416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

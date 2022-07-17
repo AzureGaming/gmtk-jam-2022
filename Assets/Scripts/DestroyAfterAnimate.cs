@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class DestroyAfterAnimate : MonoBehaviour
 {
+    [SerializeField] GameObject target;
     public void Destroy()
     {
-        Destroy(gameObject);
+        if (target != null)
+        {
+            Destroy(target);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

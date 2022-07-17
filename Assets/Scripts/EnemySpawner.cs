@@ -81,7 +81,7 @@ public class EnemySpawner : MonoBehaviour
 
     void CompleteWave()
     {
-        if (waveTime >= 5f)
+        if (waveTime >= 60f)
         {
             spawning = false;
         }

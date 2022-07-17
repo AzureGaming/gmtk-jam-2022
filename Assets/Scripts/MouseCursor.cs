@@ -14,14 +14,14 @@ public class MouseCursor : MonoBehaviour
 
     private void OnEnable()
     {
-        ThrowDetector.OnMouseDown += () => SetMouseDown(true);
-        ThrowDetector.OnMouseUp += () => SetMouseDown(false);
+        ThrowDetector.OnMouseDown += HandleOnMouseDown;
+        ThrowDetector.OnMouseUp += HandleOnMouseUp;
     }
 
     private void OnDisable()
     {
-        ThrowDetector.OnMouseDown -= () => SetMouseDown(true);
-        ThrowDetector.OnMouseUp -= () => SetMouseDown(false);
+        ThrowDetector.OnMouseDown -= HandleOnMouseDown;
+        ThrowDetector.OnMouseUp -= HandleOnMouseUp;
     }
 
     private void Start()
@@ -33,6 +33,16 @@ public class MouseCursor : MonoBehaviour
     {
         UpdatePosition();
         UpdateSprite();
+    }
+
+    void HandleOnMouseDown()
+    {
+        SetMouseDown(true);
+    }
+
+    private void HandleOnMouseUp()
+    {
+        SetMouseDown(false);
     }
 
     void SetMouseDown(bool val)

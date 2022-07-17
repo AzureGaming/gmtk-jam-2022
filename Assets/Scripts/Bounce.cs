@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bounce : MonoBehaviour
 {
+    public bool isBuild = false;
     BounceAudio audio;
     float speed = 0f;
 
@@ -23,7 +24,14 @@ public class Bounce : MonoBehaviour
     {
         if (transform.localPosition.y > 0) // apply gravity if midair
         {
-            speed -= 0.001f;
+            if (isBuild)
+            {
+                speed -= 0.001f;
+            }
+            else
+            {
+                speed -= 0.00001f;
+            }
         }
 
         // add speed to altitude
@@ -46,7 +54,15 @@ public class Bounce : MonoBehaviour
             if (speed < 0)
             {
                 // if falling down, reduce speed
-                speed = -speed * 0.8f - 0.001f;
+                if (isBuild)
+                {
+                    speed = -speed * 0.8f - 0.001f;
+
+                }
+                else
+                {
+                    speed = -speed * 0.8f - 0.0008f;
+                }
             }
 
             //if (speed < 1) // if speed is below threshold, snap to ground

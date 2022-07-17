@@ -9,6 +9,7 @@ public class Explode : DiceTrigger
 
     [SerializeField] GameObject debugPrefab;
     [SerializeField] GameObject explosionPrefab;
+    [SerializeField] GameObject indicatorPrefab;
     Rigidbody2D rb2d;
 
     private void Awake()
@@ -22,16 +23,16 @@ public class Explode : DiceTrigger
         {
             radius = radiusValue * 0.1f;
             CheckCollisions(radius);
-            Debug2();
             int level = 1;
             if (radiusValue > 15)
             {
                 level = 3;
-            } else if (radiusValue > 5 && radiusValue <= 15)
+            }
+            else if (radiusValue > 5 && radiusValue <= 15)
             {
                 level = 2;
             }
-            Complete(level);
+            Complete(level, radiusValue);
             Destroy(gameObject);
         }
     }
@@ -43,18 +44,7 @@ public class Explode : DiceTrigger
 
     void CheckCollisions(float radius)
     {
-        Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position, radius);
-        foreach (Collider2D collision in collisions)
-        {
-            if (collision.GetComponent<Damageable>())
-            {
-                collision.GetComponent<Damageable>().TakeDamage(10);
-            }
-        }
-    }
-
-    void Debug2()
-    {
-        Instantiate(debugPrefab, transform.position, Quaternion.identity).GetComponent<ExplosionRadiusDebug>().SetRadius(radius);
+        GameObject indicator = Instantiate(indicatorPrefab, transform.position, Quaternion.identity);
+        indicator.transform.localScale = new Vector2(radius, radius) * 1.15f;
     }
 }

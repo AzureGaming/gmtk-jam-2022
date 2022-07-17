@@ -8,6 +8,7 @@ public class DiceTriggerFreeze : DiceTrigger
     float radius;
 
     [SerializeField] GameObject debugPrefab;
+    [SerializeField] GameObject indicatorPrefab;
     Rigidbody2D rb2d;
 
     private void Awake()
@@ -17,11 +18,10 @@ public class DiceTriggerFreeze : DiceTrigger
 
     void Update()
     {
-        if (rb2d.velocity.magnitude < 0.1f)
+        if (rb2d.velocity.magnitude < 0.9f)
         {
             radius = radiusValue * 0.1f;
             Freeze(radius);
-            OnResolve?.Invoke();
             int level = 1;
             if (radiusValue > 15)
             {
@@ -31,7 +31,7 @@ public class DiceTriggerFreeze : DiceTrigger
             {
                 level = 2;
             }
-            Complete(level);
+            Complete(level, radiusValue);
             Destroy(gameObject);
         }
     }
@@ -43,18 +43,7 @@ public class DiceTriggerFreeze : DiceTrigger
 
     void Freeze(float radius)
     {
-        Collider2D[] collisions = Physics2D.OverlapCircleAll(transform.position, radius);
-        foreach (Collider2D collision in collisions)
-        {
-            if (collision.GetComponent<Freezeable>())
-            {
-                collision.GetComponent<Freezeable>().Freeze();
-            }
-        }
-    }
-
-    void Debug2()
-    {
-        Instantiate(debugPrefab, transform.position, Quaternion.identity).GetComponent<ExplosionRadiusDebug>().SetRadius(radius);
+        GameObject indicator = Instantiate(indicatorPrefab, transform.position, Quaternion.identity);
+        indicator.transform.localScale = new Vector2(radius, radius) * 1.15f;
     }
 }

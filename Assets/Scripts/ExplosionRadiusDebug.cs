@@ -12,7 +12,7 @@ public class ExplosionRadiusDebug : MonoBehaviour
         Gizmos.color = Color.red;
         if (radius != default)
         {
-            Gizmos.DrawWireSphere(transform.position, radius);
+            Gizmos.DrawWireCube(transform.position, new Vector2(1f, 1f));
         }
     }
 

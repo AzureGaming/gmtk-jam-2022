@@ -201,6 +201,7 @@ MonoBehaviour:
   explosionLevel3Prefab: {fileID: 4013579950701407675, guid: 22f2bd567a0fe6548a611994f124f656, type: 3}
   debugPrefab: {fileID: 8357133860421482385, guid: ae04b88065f83084989351c030b976a6, type: 3}
   explosionPrefab: {fileID: 4013579950701407675, guid: 22f2bd567a0fe6548a611994f124f656, type: 3}
+  indicatorPrefab: {fileID: 793828148349429683, guid: 1faddbed252ff14418c73ef44040db55, type: 3}
 --- !u!82 &7581237486699505966
 AudioSource:
   m_ObjectHideFlags: 0

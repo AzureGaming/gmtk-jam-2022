@@ -6,7 +6,7 @@ public class ThrowDetector : MonoBehaviour
 {
     public delegate void MouseDown();
     public static MouseDown OnMouseDown;
-    public delegate void MouseUp();
+    public delegate void MouseUp(bool throwing);
     public static MouseUp OnMouseUp;
 
     Vector3 oldMousePos;
@@ -44,19 +44,26 @@ public class ThrowDetector : MonoBehaviour
     private void Release()
     {
         isMouseDown = false;
-        OnMouseUp?.Invoke();
 
         mouseSpeed = (oldMousePos - Input.mousePosition);
-        screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+        Debug.Log(mouseSpeed.magnitude);
+        if (mouseSpeed.magnitude == 0f)
+        {
+            OnMouseUp?.Invoke(false);
+        }
+        else
+        {
+            OnMouseUp?.Invoke(true);
+            screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 
-        Vector3 targetPos = Camera.main.ScreenToWorldPoint(curScreenPoint);
+            Vector3 targetPos = Camera.main.ScreenToWorldPoint(curScreenPoint);
+            prefabRef = Instantiate(loadedPrefab, targetPos, Quaternion.identity);
+            prefabRef.GetComponent<Rigidbody2D>().AddForce(mouseSpeed * 0.08f * -1, ForceMode2D.Impulse);
 
-        prefabRef = Instantiate(loadedPrefab, targetPos, Quaternion.identity);
-        prefabRef.GetComponent<Rigidbody2D>().AddForce(mouseSpeed * 0.08f * -1, ForceMode2D.Impulse);
-
-        prefabRef.GetComponentInChildren<Dice>().enabled = true;
-        prefabRef = null;
+            prefabRef.GetComponentInChildren<Dice>().enabled = true;
+            prefabRef = null;
+        }
     }
 
     void LoadDiePrefab()

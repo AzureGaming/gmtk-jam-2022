@@ -40,7 +40,7 @@ public class MouseCursor : MonoBehaviour
         SetMouseDown(true);
     }
 
-    private void HandleOnMouseUp()
+    private void HandleOnMouseUp(bool throwing)
     {
         SetMouseDown(false);
     }

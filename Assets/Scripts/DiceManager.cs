@@ -36,8 +36,11 @@ public class DiceManager : MonoBehaviour
         //type = DiceType.Explosive;
     }
 
-    public void ClearDiceType()
+    public void ClearDiceType(bool throwing)
     {
-        type = DiceType.None;
+        if (throwing)
+        {
+            type = DiceType.None;
+        }
     }
 }

@@ -8,6 +8,7 @@ public class Explode : DiceTrigger
     float radius;
 
     [SerializeField] GameObject debugPrefab;
+    [SerializeField] GameObject explosionPrefab;
     Rigidbody2D rb2d;
 
     private void Awake()
@@ -17,12 +18,20 @@ public class Explode : DiceTrigger
 
     void Update()
     {
-        if (rb2d.velocity.magnitude < 0.1f)
+        if (rb2d.velocity.magnitude < 0.9f)
         {
             radius = radiusValue * 0.1f;
             CheckCollisions(radius);
-            Complete();
             Debug2();
+            int level = 1;
+            if (radiusValue > 15)
+            {
+                level = 3;
+            } else if (radiusValue > 5 && radiusValue <= 15)
+            {
+                level = 2;
+            }
+            Complete(level);
             Destroy(gameObject);
         }
     }

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolveSound: {fileID: 7359271864927418482}
+  explosionLevel1Prefab: {fileID: 8518967192518179861, guid: 96d20838a368af64cbde747a46c63a86, type: 3}
+  explosionLevel2Prefab: {fileID: 6517769793868799729, guid: 547d22d1b5cd8dd47bdf72dcabb747c6, type: 3}
+  explosionLevel3Prefab: {fileID: 4013579950701407675, guid: 22f2bd567a0fe6548a611994f124f656, type: 3}
   debugPrefab: {fileID: 8357133860421482385, guid: ae04b88065f83084989351c030b976a6, type: 3}
 --- !u!1001 &1086657884166492508
 PrefabInstance:

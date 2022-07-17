@@ -21,7 +21,6 @@ public class Damageable : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        StopAllCoroutines();
         gameObject.GetComponent<Health>().health -= damage;
         if (gameObject.GetComponent<Health>().health <= 0)
         {

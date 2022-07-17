@@ -39,7 +39,7 @@ public class Explode : DiceTrigger
         {
             if (collision.GetComponent<Damageable>())
             {
-                collision.GetComponent<Damageable>().HandleCollision();
+                collision.GetComponent<Damageable>().TakeDamage(10);
             }
         }
     }

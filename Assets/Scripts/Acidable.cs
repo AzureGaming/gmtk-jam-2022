@@ -5,8 +5,14 @@ using UnityEngine;
 public class Acidable : MonoBehaviour
 {
     [SerializeField] Moveable moveable;
+    Damageable damageable;
     bool acidApplied = false;
     float acidDamageTimer = 0f;
+
+    private void Awake()
+    {
+        damageable = GetComponent<Damageable>();
+    }
 
     private void Update()
     {
@@ -14,7 +20,7 @@ public class Acidable : MonoBehaviour
         {
             if (acidDamageTimer < 0f)
             {
-                TakeDamage(5);
+                damageable.TakeDamage(5);
                 acidDamageTimer = 0.5f;
             }
             acidDamageTimer -= Time.deltaTime;
@@ -37,31 +43,5 @@ public class Acidable : MonoBehaviour
             acidApplied = false;
             moveable.speed *= 4f;
         }
-    }
-
-    void TakeDamage(int damage)
-    {
-        gameObject.GetComponent<Health>().health -= damage;
-        if (gameObject.GetComponent<Health>().health <= 0)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            StartCoroutine(FlashRed());
-        }
-    }
-
-    IEnumerator FlashRed()
-    {
-        SpriteRenderer spriteR = GetComponent<SpriteRenderer>();
-        Color origColor = spriteR.color;
-        spriteR.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        spriteR.color = origColor;
-        yield return new WaitForSeconds(0.1f);
-        spriteR.color = Color.red;
-        yield return new WaitForSeconds(0.1f);
-        spriteR.color = origColor;
     }
 }

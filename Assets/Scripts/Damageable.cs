@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class Damageable : MonoBehaviour
 {
-    public void HandleCollision()
-    {
-        TakeDamage(10);
-    }
+    [SerializeField] AudioSource hurt;
+    [SerializeField] AudioSource death;
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         gameObject.GetComponent<Health>().health -= damage;
         if (gameObject.GetComponent<Health>().health <= 0)
         {
+            if (death != null)
+            {
+                AudioSource.PlayClipAtPoint(death.clip, transform.position);
+            }
             Destroy(gameObject);
         }
         else
         {
+            if (hurt != null)
+            {
+                hurt.Play();
+            }
             StartCoroutine(FlashRed());
         }
     }

@@ -6,9 +6,22 @@ public class Damageable : MonoBehaviour
 {
     [SerializeField] AudioSource hurt;
     [SerializeField] AudioSource death;
+    Color origColor;
+    SpriteRenderer spriteR;
+
+    private void Awake()
+    {
+        spriteR = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        origColor = spriteR.color;
+    }
 
     public void TakeDamage(int damage)
     {
+        StopAllCoroutines();
         gameObject.GetComponent<Health>().health -= damage;
         if (gameObject.GetComponent<Health>().health <= 0)
         {
@@ -30,8 +43,6 @@ public class Damageable : MonoBehaviour
 
     IEnumerator FlashRed()
     {
-        SpriteRenderer spriteR = GetComponent<SpriteRenderer>();
-        Color origColor = spriteR.color;
         spriteR.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         spriteR.color = origColor;

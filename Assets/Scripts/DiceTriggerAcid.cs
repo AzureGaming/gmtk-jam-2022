@@ -18,7 +18,7 @@ public class DiceTriggerAcid : DiceTrigger
 
     void Update()
     {
-        if (rb2d.velocity.magnitude < 0.1f)
+        if (rb2d.velocity.magnitude < 0.9f)
         {
             radius = radiusValue * 0.1f;
             SpawnAcid(radius);
